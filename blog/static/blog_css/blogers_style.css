@@ -1,0 +1,28 @@
+footer{
+	background: grey;
+}
+main{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.freedom{
+	background-color: darkgrey;
+	border-radius: 20px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.ot{
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.im{
+	width: 100%;
+	display: block;
+}
+.a{
+	color: #505050;
+}
+.a:hover{
+	text-decoration: none;
+	color: #606060
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SMS</title>
+	<style>
+		td, table{
+			border: 1px solid;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="text-center">My messages</h1>
+	<table>
+		<tr>
+			<td>Who write</td>
+			<td>Theme of letter</td>
+			<td>Staff of letter</td>
+			<td>When writed</td>
+		</tr>
+		{% if my_mes %}
+			{% for mm in my_mes %}
+				<tr>
+					<td>{{ mm.name_writer }}</td>
+					<td>{{ mm.title }}</td>
+					<td>{{ mm.message }}</td>
+					<td>{{ mm.when }}</td>
+				</tr>
+			{% endfor %}
+		{% else %}
+			<p>No messages for you</p>
+		{% endif %}
+	</table>
+</body>
+</html>

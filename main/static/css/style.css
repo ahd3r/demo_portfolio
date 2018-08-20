@@ -1,0 +1,39 @@
+footer{
+	background: grey;
+}
+main{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.image{
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+}
+.info{
+	background-color: darkgrey;
+	border-radius: 20px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.ot{
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.bc{
+	background-color: grey;
+}
+.contact{
+	background-color: darkgrey;
+	border-radius: 20px;
+	padding-top: 10px;
+}
+.f{
+	background-color: darkgrey;
+	border-radius: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.b{
+	margin-right: 10px;
+}

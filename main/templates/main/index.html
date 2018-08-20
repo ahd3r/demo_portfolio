@@ -1,0 +1,56 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block body %}
+<div class="container-fluid">
+	<div class="info">
+		<div class="row">
+			<div class="col-12">
+				<p class="text-center"><img src="{% static 'me/me.jpg' %}" class="image"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col"></div>
+			<div class="col-6 text-center">
+				<p><i>Hi, my name is Ander, I am 17 and I am a developer. I am coding on python and also I know php. I have been learning coding almost for three years and not going to stop because new technologies released every month and I want to know them for create more cool and advanced application, I want that people to enjoy during use my application and admire him, and of course I want to push myself simultaneously with the time. I am so excited by technologies that I can spend all my time to learn it. My purpose of life is create something that help humanity to develop and improve the world in which we live and where I can do it if not in programming. Besides coding I also like to design. I think, if you want to create something new you must know code and design. For my description no one is so suitable as Elon Musk, that why he is my idol. As you can understood I want to dedicate my life to technology, that's why I want to be a developer and improving my skills during all life.</i></p>
+				<!-- <i><p><h2>Hobby</h2><br>First of all programming because I love to do it and I spend most of my time on it, also I like read a book, but not a classic, I like books about programming and business, I read a book per a week, also I like to create a music in adobe audition and play on the guitar. By the way I like an english language, that's why I improve my skill on this, and besides english I want to know spanish, swedish and german. I like to design too, because I believe that minimalistic design is main of good application. Besides design application a like to design 3d-model in 3D Max. Also I like to watch some education video.</p></i> -->
+			</div>
+			<div class="col"></div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<p class="text-center"><a href="{% url 'write_me' %}"><button class="btn">Write me</button></a></p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ot"></div>
+<div class="container-fluid">
+	<div class="info">
+		<div class="row">
+			<div class="col-12">
+				<h1 class="text-center">Projects</h1>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				{% if p %}
+					{% for pr in p %}
+						<div class="col-4">
+							<div class="card bc" title="{{ pr.name }}">
+								<a href="https://github.com/ahd3r" target="_blank"><img src="{{ pr.image.url }}" class="card-img-top"></a>
+								<div class="card-body">
+									<p class="card-text">{{ pr.desc }}</p>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				{% else %}
+					<div class="col-12">
+						<p class="text-center">Nothing</p>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

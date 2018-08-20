@@ -1,0 +1,30 @@
+{% extends 'baser/basingfile.html' %}
+{% load static %}
+{% block body %}
+{% if event %}
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<h1 class="text-center">{{ event.name }}</h1>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-12">
+			<p>{{ event.desc }}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<p class="text-center"><img src="{{ event.image.url }}"></p>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-12">
+			<p class="text-right">{{ event.date }}</p>
+		</div>
+	</div>
+</div>
+{% endif %}
+{% endblock %}

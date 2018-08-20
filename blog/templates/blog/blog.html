@@ -1,0 +1,39 @@
+{% extends 'baser/basingfile.html' %}
+{% load static %}
+{% block body %}
+<div class="container">
+	{% if e %}
+		{% for ev in e %}
+			<div class="container-fluid freedom">
+				<div class="row">
+					<div class="col-12 text-center">
+						<a class="a" href="{{ ev.id }}"><h2>{{ ev.name }}</h2></a>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-6">
+						<p>{{ ev.staff }}<a href="{{ ev.id }}">...</a></p>
+					</div>
+					<div class="col-6">
+						<img class="im" src="{{ ev.image.url }}">
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-12 text-right">
+						{{ ev.date }}
+					</div>
+				</div>
+			</div>
+			<div class="ot"></div>
+		{% endfor %}
+	{% else %}
+	<div class="row">
+		<div class="col-12">
+			<p class="text-center">Nothing</p>
+		</div>
+	</div>
+	{% endif %}
+</div>
+{% endblock %}

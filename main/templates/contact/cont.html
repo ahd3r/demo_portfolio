@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block body %}
+<div class="container text-center contact">
+	<div class="row">
+		<div class="col"></div>
+		<div class="col-4">
+			<p><a href="https://www.facebook.com/ander.stac"><img src="{% static 'logo/svg/facebook.svg' %}" height="100" width="100"></a></p>
+			<p><a href="github.com/ahd3r"><img src="{% static 'logo/svg/github.svg' %}" height="100" width="100"></a></p>
+			<p><a href="https://www.linkedin.com/in/ander-stacen-06a423159/"><img src="{% static 'logo/svg/linkedin.svg' %}" height="100" width="100"></a></p>
+		</div>
+		<div class="col-4">
+			<p><img title="fcdd0709" src="{% static 'logo/svg/skype.svg' %}" height="100" width="100"></p>
+			<p><a href="https://stackoverflow.com/users/10093931/"><img src="{% static 'logo/svg/stack-overflow.svg' %}" height="100" width="100"></a></p>
+			<p><img title="+380953601480" src="{% static 'logo/svg/telegram.svg' %}" height="100" width="100"></p>
+		</div>
+		<div class="col"></div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<p><img title="ander11110@gmail.com" src="{% static 'logo/svg/gmail.svg' %}" height="100" width="100"></p>
+		</div>
+	</div>
+</div>
+{% endblock %}
